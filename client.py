@@ -48,6 +48,9 @@ def Print():
     global i, jData
     i=i+1
     print("\nServer: " + jData["name"] + "\n",i)
+
+def Writed():
+    print    
     
 while True:
 
@@ -55,12 +58,13 @@ while True:
         while True:
             Term()              #Bağlantı Kurma
             Read()              #Dosya okuma
-            Control()           #Kontrol
-            Send()              #Veri Gönderme
-            Get()               #Veri Alma
+            Send()              #Veri yollama
+            Get()               #Veri alma
+            Writed()            #Database yazma
             Write(jData)        #Dosyaya yazma
+                                       
+
             time.sleep(1)
         s.close()
     except socket.error:
         print("[Server aktif değil.] Mesaj:")
-    
